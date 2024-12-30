@@ -1,11 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Animado</title>
+
 </head>
 <body>
-    
+  <header>
+    <nav>
+      <div class="logo">Meu Portfólio</div>
+      <ul>
+        <li><a href="#inicio" onclick="showMessage()">Início</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#sobre-mim">Sobre Mim</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#projetos">Projetos Recentes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="content" id="inicio">
+    <div id="animatedTextContainer">
+      <!-- A mensagem animada será inserida aqui -->
+    </div>
+  </div>
+
+  <script>
+    // Função para exibir a mensagem animada
+    function showMessage() {
+      const container = document.getElementById("animatedTextContainer");
+      container.innerHTML = `
+        <div class="animated-text">Eu sou Chirico</div>
+        <div class="subtext">CEO de <span class="highlight">The Line</span></div>
+      `;
+    }
+
+    // Exibir a mensagem ao carregar a página
+    window.onload = showMessage;
+  </script>
 </body>
 </html>
