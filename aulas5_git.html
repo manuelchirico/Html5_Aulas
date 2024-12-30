@@ -40,6 +40,34 @@
   <script>
 
 
+document.querySelector('a[href="#sobre-mim"]').addEventListener("click", () => {
+  const container = document.querySelector(".content");
+  container.innerHTML = `
+    <div class="typing-container">
+      <span id="typing-text"></span>
+    </div>
+  `;
+
+  const text = "Eu sou Manuel Chirico, estudante de 4º ano de Informática na UniLicungo, desenvolvedor e designer web. Contato: 846100952.";
+  const typingElement = document.getElementById("typing-text");
+  let index = 0;
+
+  function typeText() {
+    if (index < text.length) {
+      typingElement.textContent += text[index];
+      index++;
+      setTimeout(typeText, 50); // Velocidade de digitação
+    }
+  }
+
+  typeText();
+});
+
+
+
+
+
+
 
 document.querySelector('a[href="#servicos"]').addEventListener("click", () => {
   const cardsContainer = document.getElementById("cardsContainer");
