@@ -27,7 +27,39 @@
     </div>
   </div>
 
+  <div class="content" id="servicos">
+    <!-- Os cards serão inseridos dinamicamente aqui -->
+    <div id="cardsContainer"></div>
+  </div>
+  
+
+
+
+
+
   <script>
+
+
+
+document.querySelector('a[href="#servicos"]').addEventListener("click", () => {
+  const cardsContainer = document.getElementById("cardsContainer");
+  cardsContainer.innerHTML = `
+    <div class="card">Web Design</div>
+    <div class="card">Redes</div>
+    <div class="card">Programação</div>
+    <div class="card">Câmera</div>
+  `;
+});
+
+
+// letras sobre me 
+
+
+
+
+
+
+
     // Função para exibir a mensagem animada
     function showMessage() {
       const container = document.getElementById("animatedTextContainer");
